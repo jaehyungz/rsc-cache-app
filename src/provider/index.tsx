@@ -14,10 +14,7 @@ function APIProvider({ children }: Props) {
       queries: {
         retry: 0,
         throwOnError: (error, query) => {
-          // console.log(error);
-          // console.log(query);
-          // query.invalidate();
-          // return true;
+          query.invalidate();
           return false;
         },
         // throwOnError: undefined,
